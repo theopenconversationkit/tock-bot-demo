@@ -251,8 +251,8 @@
     </licenses>
 
     <scm>
-        <connection>scm:git@github.com:theopenconversationkit/tock-bot-demo.git</connection>
-        <developerConnection>scm:git@github.com:theopenconversationkit/tock-bot-demo.git
+        <connection>scm:git:git@github.com:theopenconversationkit/tock-bot-demo.git</connection>
+        <developerConnection>scm:git:git@github.com:theopenconversationkit/tock-bot-demo.git
         </developerConnection>
         <url>git@github.com:theopenconversationkit/tock-bot-demo.git</url>
         <tag>bot-api-demo-19.9.1</tag>
