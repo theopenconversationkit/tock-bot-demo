@@ -9,6 +9,8 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
     <!-- Tock Widget -->
     <script src="https://unpkg.com/tock-react-kit@0.0.1/build/tock-react-kit.umd.js"></script>
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
 </head>
 
 <body>
@@ -18,7 +20,7 @@
     TockReact.renderChat(
         document.getElementById('app'),
         //Set your web connector url here
-        'http://localhost:8080/TODO',
+        'http://localhost:8080/[relative web connector rest path]',
         //options: https://github.com/theopenconversationkit/tock-react-kit/blob/master/src/TockTheme.ts
         {
             fontFamily: 'Montserrat, Arial, Helvetica, sans-serif',
