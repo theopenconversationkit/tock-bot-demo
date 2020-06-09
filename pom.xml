@@ -23,7 +23,7 @@
 
     <groupId>ai.tock</groupId>
     <artifactId>tock-bot-demo-api</artifactId>
-    <version>20.3.2</version>
+    <version>20.3.3-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Tock Bot API Demo</name>
     <description>An example of bot built with Tock using Tock API</description>
@@ -255,7 +255,7 @@
         <developerConnection>scm:git:git@github.com:theopenconversationkit/tock-bot-demo.git
         </developerConnection>
         <url>git@github.com:theopenconversationkit/tock-bot-demo.git</url>
-        <tag>bot-api-demo-20.3.2</tag>
+        <tag>bot-api-demo-19.9.1</tag>
     </scm>
 
     <distributionManagement>
