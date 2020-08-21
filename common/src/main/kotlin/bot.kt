@@ -19,12 +19,12 @@ package ai.tock.demo.common
 import ai.tock.bot.api.client.newBot
 import ai.tock.bot.api.client.newStory
 import ai.tock.bot.api.client.unknownStory
-import ai.tock.bot.connector.web.webButton
 import ai.tock.bot.connector.web.webMessage
+import ai.tock.bot.connector.web.webPostbackButton
 import ai.tock.bot.definition.Intent
 import ai.tock.shared.property
 
-val apiKey = property("tock_bot_api_key", "MY API KEY")
+val apiKey = property("tock_bot_api_key", "94704f8d-433d-478f-b6cc-79fe61f697e9")
 
 val bot = newBot(
     apiKey,
@@ -72,8 +72,8 @@ val bot = newBot(
             //custom model sample
             webMessage(
                 "Sorry - not understood",
-                webButton("Card", Intent("card")),
-                webButton("Carousel", Intent("carousel"))
+                webPostbackButton("Card", Intent("card")),
+                webPostbackButton("Carousel", Intent("carousel"))
             )
         }
     }
