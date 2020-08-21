@@ -21,6 +21,7 @@ import ai.tock.bot.api.client.newStory
 import ai.tock.bot.api.client.unknownStory
 import ai.tock.bot.connector.web.webButton
 import ai.tock.bot.connector.web.webMessage
+import ai.tock.bot.connector.web.webPostbackButton
 import ai.tock.bot.definition.Intent
 import ai.tock.shared.property
 
@@ -72,8 +73,8 @@ val bot = newBot(
             //custom model sample
             webMessage(
                 "Sorry - not understood",
-                webButton("Card", Intent("card")),
-                webButton("Carousel", Intent("carousel"))
+                webPostbackButton("Card", Intent("card")),
+                webPostbackButton("Carousel", Intent("carousel"))
             )
         }
     }
