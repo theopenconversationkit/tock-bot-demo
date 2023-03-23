@@ -44,7 +44,7 @@
         <kotlin-logging>3.0.3</kotlin-logging>
 
         <!-- fix version, troubles resolving : net.minidev:json-smart:pom:2.3-SNAPSHOT for connector teams-->
-        <minidev>2.4.8</minidev>
+        <minidev>2.4.9</minidev>
 
         <plugin.surefire>3.0.0-M7</plugin.surefire>
         <plugin.source>3.2.1</plugin.source>
