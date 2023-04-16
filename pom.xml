@@ -34,24 +34,24 @@
         <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
         <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
 
-        <kotlin>1.7.20</kotlin>
-        <tock>22.9.3</tock>
-        <junit-jupiter>5.9.1</junit-jupiter>
-        <mockk>1.13.2</mockk>
+        <kotlin>1.8.20</kotlin>
+        <tock>23.3.0</tock>
+        <junit-jupiter>5.9.2</junit-jupiter>
+        <mockk>1.13.5</mockk>
 
-        <slf4j>2.0.3</slf4j>
-        <logback>1.4.4</logback>
-        <kotlin-logging>3.0.3</kotlin-logging>
+        <slf4j>2.0.7</slf4j>
+        <logback>1.4.6</logback>
+        <kotlin-logging>3.0.5</kotlin-logging>
 
         <!-- fix version, troubles resolving : net.minidev:json-smart:pom:2.3-SNAPSHOT for connector teams-->
-        <minidev>2.4.8</minidev>
+        <minidev>2.4.10</minidev>
 
-        <plugin.surefire>3.0.0-M7</plugin.surefire>
+        <plugin.surefire>3.0.0</plugin.surefire>
         <plugin.source>3.2.1</plugin.source>
-        <plugin.release>3.0.0-M1</plugin.release>
+        <plugin.release>3.0.0</plugin.release>
         <plugin.gpg>3.0.1</plugin.gpg>
-        <plugin.nexus-staging>1.6.8</plugin.nexus-staging>
-        <plugin.dokka.version>1.7.10</plugin.dokka.version>
+        <plugin.nexus-staging>1.6.13</plugin.nexus-staging>
+        <plugin.dokka.version>1.8.10</plugin.dokka.version>
 
         <kotlin.compiler.jvmTarget>11</kotlin.compiler.jvmTarget>
     </properties>
