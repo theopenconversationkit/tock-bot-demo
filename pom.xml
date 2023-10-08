@@ -34,17 +34,17 @@
         <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
         <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
 
-        <kotlin>1.8.20</kotlin>
-        <tock>23.3.0</tock>
-        <junit-jupiter>5.9.2</junit-jupiter>
-        <mockk>1.13.5</mockk>
+        <kotlin>1.9.10</kotlin>
+        <tock>23.9.0</tock>
+        <junit-jupiter>5.10.0</junit-jupiter>
+        <mockk>1.13.8</mockk>
 
-        <slf4j>2.0.7</slf4j>
-        <logback>1.4.6</logback>
+        <slf4j>2.0.9</slf4j>
+        <logback>1.4.11</logback>
         <kotlin-logging>3.0.5</kotlin-logging>
 
         <!-- fix version, troubles resolving : net.minidev:json-smart:pom:2.3-SNAPSHOT for connector teams-->
-        <minidev>2.4.10</minidev>
+        <minidev>2.5.0</minidev>
 
         <plugin.surefire>3.0.0</plugin.surefire>
         <plugin.source>3.2.1</plugin.source>
