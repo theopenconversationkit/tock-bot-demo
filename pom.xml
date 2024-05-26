@@ -34,24 +34,21 @@
         <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
         <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
 
-        <kotlin>1.9.10</kotlin>
-        <tock>23.9.0</tock>
+        <kotlin>2.0.0</kotlin>
+        <tock>24.3.0</tock>
         <junit-jupiter>5.10.0</junit-jupiter>
-        <mockk>1.13.8</mockk>
+        <mockk>1.13.11</mockk>
 
         <slf4j>2.0.9</slf4j>
-        <logback>1.4.11</logback>
+        <logback>1.5.6</logback>
         <kotlin-logging>3.0.5</kotlin-logging>
 
-        <!-- fix version, troubles resolving : net.minidev:json-smart:pom:2.3-SNAPSHOT for connector teams-->
-        <minidev>2.5.0</minidev>
-
-        <plugin.surefire>3.0.0</plugin.surefire>
-        <plugin.source>3.2.1</plugin.source>
-        <plugin.release>3.0.0</plugin.release>
-        <plugin.gpg>3.0.1</plugin.gpg>
+        <plugin.surefire>3.2.5</plugin.surefire>
+        <plugin.source>3.3.1</plugin.source>
+        <plugin.release>3.0.1</plugin.release>
+        <plugin.gpg>3.2.4</plugin.gpg>
         <plugin.nexus-staging>1.6.13</plugin.nexus-staging>
-        <plugin.dokka.version>1.8.10</plugin.dokka.version>
+        <plugin.dokka.version>1.9.20</plugin.dokka.version>
 
         <kotlin.compiler.jvmTarget>11</kotlin.compiler.jvmTarget>
     </properties>
@@ -97,12 +94,6 @@
                     <artifactId>slf4j-api</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>net.minidev</groupId>
-            <artifactId>json-smart</artifactId>
-            <version>${minidev}</version>
         </dependency>
 
         <dependency>
