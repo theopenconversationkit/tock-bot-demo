@@ -30,7 +30,15 @@ val apiKey = property("tock_bot_api_key", "MY API KEY")
 val bot = newBot(
     apiKey,
     newStory("greetings") {
+        println("received : $message")
         end("Hello $message")
+    },
+    newStory("stream") {
+        for (i in 1..10) {
+            send("$i : $message")
+            Thread.sleep(200)
+        }
+        end("That's all folks!")
     },
     newStory("card") {
         //cleanup entities
