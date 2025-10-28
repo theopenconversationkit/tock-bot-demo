@@ -41,7 +41,10 @@
                 card: `& button { background: #F46197; color: #FFFDF7; border-color: #FFFDF7; }`,
             },
         },
-        { renderers: {} }
+        {
+            network: { disableSse: true },
+            renderers: {}
+        }
     );
 </script>
 </body>
