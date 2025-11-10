@@ -19,11 +19,11 @@ package ai.tock.demo.common
 import ai.tock.bot.api.client.newBot
 import ai.tock.bot.api.client.newStory
 import ai.tock.bot.api.client.unknownStory
-import ai.tock.bot.connector.web.webButton
 import ai.tock.bot.connector.web.webMessage
 import ai.tock.bot.connector.web.webPostbackButton
 import ai.tock.bot.definition.Intent
 import ai.tock.shared.property
+import kotlinx.coroutines.delay
 
 val apiKey = property("tock_bot_api_key", "MY API KEY")
 
@@ -34,10 +34,13 @@ val bot = newBot(
         end("Hello $message")
     },
     newStory("stream") {
+        enableStreaming()
         for (i in 1..10) {
-            send("$i : $message")
-            Thread.sleep(200)
+            send("$i + ")
+            delay(400)
         }
+        send(" = ${(1..10).sum()}")
+        disableStreaming()
         end("That's all folks!")
     },
     newStory("card") {
@@ -76,14 +79,18 @@ val bot = newBot(
             )
         )
     },
-    unknownStory {
+    newStory("web") {
         end {
             //custom model sample
             webMessage(
-                "Sorry - not understood",
+                "Web",
                 webPostbackButton("Card", Intent("card")),
-                webPostbackButton("Carousel", Intent("carousel"))
+                webPostbackButton("Carousel", Intent("carousel")),
+                webPostbackButton("Streaming", Intent("stream"))
             )
         }
+    },
+    unknownStory {
+        end("Sorry - not understood")
     }
 )
