@@ -19,10 +19,12 @@ package ai.tock.demo.common
 import ai.tock.bot.api.client.newBot
 import ai.tock.bot.api.client.newStory
 import ai.tock.bot.api.client.unknownStory
+import ai.tock.bot.connector.web.webConnectorType
 import ai.tock.bot.connector.web.webMessage
 import ai.tock.bot.connector.web.webPostbackButton
 import ai.tock.bot.definition.Intent
 import ai.tock.shared.property
+import ai.tock.translator.raw
 import kotlinx.coroutines.delay
 
 val apiKey = property("tock_bot_api_key", "MY API KEY")
@@ -36,10 +38,10 @@ val bot = newBot(
     newStory("stream") {
         enableStreaming()
         for (i in 1..10) {
-            send("$i + ")
+            send("$i + ".raw)
             delay(400)
         }
-        send(" = ${(1..10).sum()}")
+        send(" = ${(1..10).sum()}".raw)
         disableStreaming()
         end("That's all folks!")
     },
@@ -82,12 +84,40 @@ val bot = newBot(
     newStory("web") {
         end {
             //custom model sample
-            webMessage(
-                "Web",
-                webPostbackButton("Card", Intent("card")),
-                webPostbackButton("Carousel", Intent("carousel")),
-                webPostbackButton("Streaming", Intent("stream"))
-            )
+            when (targetConnectorType) {
+                webConnectorType ->
+                    webMessage(
+                        "Web",
+                        webPostbackButton("Card", Intent("card")),
+                        webPostbackButton("Carousel", Intent("carousel")),
+                        webPostbackButton("Streaming", Intent("stream"))
+                    )
+
+                else -> "[unsupported]"
+            }
+        }
+    },
+    newStory("markdown") {
+        end {
+            """
+                - **bold**
+                - *italic*
+                - ~~strike~~
+
+                ---
+                
+                [google link](https://www.google.com)
+                
+                ---
+                
+                # Titre 1
+                ## Titre 2
+                ### Titre 3
+                
+                ---
+                
+                ![GNU image](https://upload.wikimedia.org/wikipedia/commons/2/22/Heckert_GNU_white.svg)
+            """.trimIndent().raw
         }
     },
     unknownStory {

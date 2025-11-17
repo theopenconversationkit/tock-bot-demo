@@ -35,7 +35,9 @@
         <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
 
         <kotlin>2.2.20</kotlin>
-        <tock>25.10.0</tock>
+        <tock>25.10.2-SNAPSHOT</tock>
+        <ktor>3.3.2</ktor>
+
         <junit-jupiter>6.0.0</junit-jupiter>
         <mockk>1.14.6</mockk>
 
@@ -57,6 +59,7 @@
         <module>common</module>
         <module>webhook</module>
         <module>websocket</module>
+        <module>web</module>
     </modules>
 
     <dependencies>
