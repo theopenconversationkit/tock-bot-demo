@@ -1,11 +1,10 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="WebSocketLocalhost" type="JetRunConfigurationType">
+  <configuration default="false" name="WebhookLocalhost" type="JetRunConfigurationType">
     <envs>
       <env name="tock_bot_api_demo" value="false" />
-      <env name="tock_bot_api_key" value="6b608840-1d7d-43f4-9a57-afe68f1b0416" />
     </envs>
-    <option name="MAIN_CLASS_NAME" value="ai.tock.demo.websocket.StartWebsocketKt" />
-    <module name="tock-bot-demo-api-websocket" />
+    <option name="MAIN_CLASS_NAME" value="ai.tock.demo.webhook.StartWebhookKt" />
+    <module name="tock-bot-demo-api-webhook" />
     <shortenClasspath name="NONE" />
     <extension name="net.ashald.envfile">
       <option name="IS_ENABLED" value="false" />
