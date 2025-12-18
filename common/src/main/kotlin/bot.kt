@@ -36,12 +36,38 @@ val bot = newBot(
         end("Hello $message")
     },
     newStory("stream") {
+        send("Streaming test...")
         enableStreaming()
         for (i in 1..10) {
             send("$i + ".raw)
             delay(400)
         }
         send(" = ${(1..10).sum()}".raw)
+        disableStreaming()
+        end("That's all folks!")
+    },
+    newStory("stream_component") {
+        send("Streaming component test...")
+        enableStreaming()
+        for (i in 1..10) {
+            send(
+                newCard(
+                    title = "$i + ".raw,
+                    subTitle = ".".raw,
+                )
+            )
+            delay(400)
+        }
+
+        send(
+            newCard(
+                " = ${(1..10).sum()}".raw,
+                actions = listOf(
+                    newAction("Action1"),
+                    newAction("Tock", "https://doc.tock.ai")
+                )
+            )
+        )
         disableStreaming()
         end("That's all folks!")
     },
