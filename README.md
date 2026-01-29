@@ -8,5 +8,5 @@ Source code contains :
 - Simple kotlin-based bot implementation:
     - [common](common/src/main/kotlin/bot.kt): shared code between websocket & webhook implementation
     - [websocket](websocket/src/main/kotlin/StartWebsocket.kt): websocket mode launcher - just set the *tock_bot_api_key* env var
-    - [webhook](webhook/src/main/kotlin/StartWebhook.kt): webhook launcher - just set the *tock_bot_api_key* env var
+    - [webhook](webhook/src/main/kotlin/StartWebhook.kt): webhook launcher
 

@@ -116,7 +116,10 @@ val bot = newBot(
                         "Web",
                         webPostbackButton("Card", Intent("card")),
                         webPostbackButton("Carousel", Intent("carousel")),
-                        webPostbackButton("Streaming", Intent("stream"))
+                        webPostbackButton("Streaming", Intent("stream")),
+                        webPostbackButton("Streaming Component", Intent("stream_component")),
+                        webPostbackButton("Markdown", Intent("markdown")),
+                        webPostbackButton("Switching story", Intent("switch_story"))
                     )
 
                 else -> "[unsupported]"
@@ -145,6 +148,10 @@ val bot = newBot(
                 ![GNU image](https://upload.wikimedia.org/wikipedia/commons/2/22/Heckert_GNU_white.svg)
             """.trimIndent().raw
         }
+    },
+    newStory("switch_story") {
+        send("starting switching current story to stream...")
+        handleAndSwitchStory("stream")
     },
     unknownStory {
         end("Sorry - not understood")
