@@ -34,7 +34,6 @@
         <dependency>
             <groupId>ai.tock</groupId>
             <artifactId>tock-bot-api-websocket</artifactId>
-            <version>${tock}</version>
         </dependency>
         <dependency>
             <groupId>ai.tock</groupId>

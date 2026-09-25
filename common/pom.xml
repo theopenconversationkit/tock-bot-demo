@@ -34,12 +34,10 @@
         <dependency>
             <groupId>ai.tock</groupId>
             <artifactId>tock-bot-api-client</artifactId>
-            <version>${tock}</version>
         </dependency>
         <dependency>
             <groupId>ai.tock</groupId>
             <artifactId>tock-bot-connector-web</artifactId>
-            <version>${tock}</version>
         </dependency>
     </dependencies>
 
